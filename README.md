@@ -12,7 +12,19 @@ gleam add cuid2_gleam
 import cuid2_gleam
 
 pub fn main() {
-  // TODO: An example of the project in use
+  // Start by building a generator
+  // You can take the default one (id of length 24)
+  let generator = cuid2_gleam.default()
+
+  // and get some ids!
+  let id = cuid2_gleam.create(generator) // will have length 24
+
+  // You can also build your own generator with some custom options
+  let custom_generator = cuid2_gleam.new()
+  |> cuid2_gleam.with_length(10)
+  |> cuid2_gleam.with_fingerprint("Some custom fingerprint")
+  |> cuid2_gleam.build
+  let custom_id = cuid2_gleam.create(custom_generator) // will have length 10
 }
 ```
 

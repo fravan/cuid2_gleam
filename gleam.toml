@@ -1,5 +1,5 @@
 name = "cuid2_gleam"
-version = "1.0.0"
+version = "1.0.1"
 description = "Reimplementation of paralleldrive/cuid2 in Gleam!"
 licences = ["MIT"]
 repository = { type = "github", user = "fravan", repo = "cuid2_gleam" }

@@ -1,3 +1,4 @@
+import cuid2_gleam/internal/counter
 import gleam/bit_array
 import gleam/bool
 import gleam/crypto
@@ -8,7 +9,6 @@ import gleam/option
 import gleam/regexp
 import gleam/string
 import gleam/time/timestamp
-import internal/counter
 
 const big_length = 32
 

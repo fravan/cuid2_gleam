@@ -15,12 +15,7 @@ const initial_count_max = 476_782_367.0
 
 pub fn new() -> Counter {
   let start_value = float.truncate(float.random() *. initial_count_max)
-  with_value(start_value)
-}
-
-pub fn with_value(start_value: Int) -> Counter {
-  erlang_create_counter(start_value)
-  |> Counter
+  Counter(erlang_create_counter(start_value))
 }
 
 pub fn tick(counter: Counter) -> Int {
